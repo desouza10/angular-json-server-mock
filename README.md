@@ -1,59 +1,52 @@
-# AppAngularJsonServerMock
+# Angular + JSON Server Mock
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+Este projeto demonstra como utilizar o `JSON Server` para mockar APIs RESTful em aplicações Angular, permitindo o desenvolvimento frontend independente do backend real.
 
-## Development server
+## 🚀 Motivação
 
-To start a local development server, run:
+Durante o desenvolvimento frontend, é comum enfrentar situações onde o backend ainda não está disponível ou está instável. Para manter a produtividade e permitir o trabalho em paralelo, utilizamos o `JSON Server` para simular as respostas da API.
 
-```bash
-ng serve
-```
+Uma documentação de backend clara e detalhada é essencial nesse processo, pois permite que os desenvolvedores frontend criem mocks precisos e alinhados com as especificações reais da API.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ✅ Solução aplicada
 
-## Code scaffolding
+Esta aplicação lista os 100 primeiros Pokémons, permitindo visualizar os detalhes de cada um ao clicar na imagem correspondente. A API pública [PokeAPI](https://pokeapi.co/) foi utilizada como fonte de dados para simular a integração com um backend real.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🔧 Configuração
 
-```bash
-ng generate component component-name
-```
+1. **Instale as dependências:**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate --help
-```
+2. **Inicie a aplicação juntamente com o servidor de mock:**
 
-## Building
+   ```bash
+   npm run start:dev
+   ```
+   Isso fará com que a aplicação seja iniciada juntamente com o ``JSON Server`` usando o arquivo ``db.json`` como fonte de dados. 
 
-To build the project run:
+   A aplicação será servida no endereço ``http://localhost:4200`` e o mock no ``http://localhost:3000``.   
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. **Iniciar a aplicação com em produção:**
 
-## Running unit tests
+   ```bash
+   npm run start:prod
+   ```
+   A aplicação será servida no endereço ``http://localhost:4200`` apontando para a API real.   
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📁  Estrutura do Projeto
+   - ``db.json``: Contém os dados mockados da API.
+   - ``routes.json``: Mapeia as rotas da API para os dados correspondentes em db.json.
+   - ``proxy.conf.json``: Configura o proxy para redirecionar as chamadas da API para o JSON Server.
 
-```bash
-ng test
-```
+## 📌 Considerações
+   - **Documentação de Backend**: Uma documentação bem elaborada facilita a criação de mocks precisos, garantindo que o frontend esteja alinhado com as expectativas do backend.
 
-## Running end-to-end tests
+   - **Autonomia no Desenvolvimento:** Com o uso de mocks, os desenvolvedores frontend podem continuar seu trabalho sem depender do backend, aumentando a eficiência e reduzindo bloqueios.
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📄 Licença
+   Projeto de livre uso com finalidade de estudo.
+   Este projeto está licenciado sob a [MIT License](https://opensource.org/license/mit).
