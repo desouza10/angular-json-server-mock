@@ -1,0 +1,16 @@
+.pokemon-detail {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  
+    img {
+      width: 150px;
+    }
+  
+    span {
+      margin-right: 8px;
+      padding: 4px 8px;
+      background: #eee;
+      border-radius: 8px;
+    }
+  }

@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:dev": "npm-run-all build:mocks --parallel json-server start-app:dev",
+    "start:prod": "ng serve --configuration=production",
+    "start-app:dev": "ng serve --configuration=development",
+    "json-server": "json-server --watch src/mocks/db.json --port 3000 --routes src/mocks/routes.json",
     "build": "ng build",
+    "build:mocks": "node src/mocks/db/index.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:app-angular-json-server-mock": "node dist/app-angular-json-server-mock/server/server.mjs"
@@ -22,6 +26,7 @@
     "@angular/ssr": "^19.2.6",
     "angular-material": "^1.2.5",
     "express": "^4.18.2",
+    "npm-run-all": "^4.1.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -34,6 +39,7 @@
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
     "jasmine-core": "~5.6.0",
+    "json-server": "^0.17.4",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",

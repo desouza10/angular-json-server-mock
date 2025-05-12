@@ -1,0 +1,32 @@
+.pokemon-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    margin: 32px 0px;
+
+      .--pokemon-logo {
+        width: 190px;
+      }
+    
+      .--pokeball {
+        width: 50px;
+      }
+  }
+  
+  .back-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    font-size: 16px;
+    color:#2b73b9;
+    border: none;
+    padding: 24px;
+   &:hover {
+    cursor: pointer;
+    color: #ffcb05;
+   }
+  }

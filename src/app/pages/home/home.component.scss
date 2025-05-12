@@ -1,0 +1,19 @@
+.pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 0px 16px 16px;
+  }
+  
+  .pokemon-card {
+    background: #f4f4f4;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    width: 120px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  } .pokemon-card:hover {
+      cursor: pointer;
+      background: #dddddd;
+  }

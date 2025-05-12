@@ -1,0 +1,10 @@
+<app-pokemon-header [showBackButton]="false"></app-pokemon-header>
+
+<div class="pokemon-list">
+    <div class="pokemon-card" *ngFor="let pokemon of pokemons; index as i" (click)="getPokemonDetails(pokemon)">
+        <img [src]="getImageUrl(i)" [alt]="pokemon.name" />
+        <h3>{{ pokemon.name | titlecase }}</h3>
+    </div>
+</div>
+
+<!-- <pre>{{  pokemons | json}}</pre> -->
