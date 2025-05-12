@@ -47,6 +47,11 @@ Esta aplicação lista os 100 primeiros Pokémons, permitindo visualizar os deta
 
    - **Autonomia no Desenvolvimento:** Com o uso de mocks, os desenvolvedores frontend podem continuar seu trabalho sem depender do backend, aumentando a eficiência e reduzindo bloqueios.
 
+## 📌 Documentações úteis
+   - **Angular**:  https://angular.dev/installation
+   - **JSON Server**: https://www.npmjs.com/package/json-server
+   - **PokeAPI**:  https://pokeapi.co/
+
 ## 📄 Licença
    Projeto de livre uso com finalidade de estudo.
    Este projeto está licenciado sob a [MIT License](https://opensource.org/license/mit).
